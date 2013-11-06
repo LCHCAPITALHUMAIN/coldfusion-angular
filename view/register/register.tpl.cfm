@@ -1,13 +1,5 @@
 <cfclient>
-<!---<cffunction name="takePicture" returntype="String" >
-			
-	<cfset str = cfclient.camera.getPicture({},true)>
-	
-	<cfset document.getElementById("profilepic").src= str >
-	<cfset formObj = document.getElementById("myForm") >
-	<cfset formObj.photo.value = str >
-	
-</cffunction>--->
+
 <div class="container">
 	<div class="modal-header">
         	<h1>Sign up</h1>
@@ -16,8 +8,9 @@
     <div class="alert alert-error" ng-show="errorMsg">
 			{{errorMsg}} 
 		</div>
-    <div class="modal-body"  ><!--- style"margin: 0 auto;"--->
-    	
+    <div class="modal-body"  >
+ 
+ <!--- styling should idealy be in css--->   	
 <div class="row" style="float:right;max-height:50%;max-width:50%">
   <div class="col-sm-6 col-md-3">
     <div class="thumbnail">
