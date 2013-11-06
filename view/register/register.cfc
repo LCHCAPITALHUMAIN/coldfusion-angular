@@ -1,6 +1,11 @@
-component client=true{
+component client=true
+{
+ // server registration proxy
  variables.registerService = new RegisterService();
- function init(scope, root, loc){
+ 
+ //constructor
+ function init(scope, root, loc)
+ {
 	variables.scp = scope;
 	variables.root = root;
 	variables.loc = loc;
@@ -23,12 +28,13 @@ component client=true{
     }
   }
   
-  function takePicture(document){
+  // idea is to show that any js variable can be passed. However passing document is bad!
+  function takePicture(document)
+  {
 			
 	variables.scp.registration.photo = cfclient.camera.getPicture({},true);
-	
 	document.getElementById("profilepic").src= variables.scp.registration.photo;
 	
-	}
+  }
     
 }
