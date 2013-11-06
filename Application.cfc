@@ -9,12 +9,11 @@ component
 	// Get the base directory so we can set up relative mappings.
 	this.directory = getDirectoryFromPath( getCurrentTemplatePath() );
 	 
-	// Set up a mapping for "storage". Notice that the actual directory
-	// name is "data."
+	// Set up a mapping for "server". 
 	this.mappings[ "/server" ] = ( this.directory & "server/" );
 	
 	function onApplicationStart()
 	{
-		Application.users["a@bc.de"]=123;
+		Application.users["a@bc.de"]=123;//user/password
 	}
 }
